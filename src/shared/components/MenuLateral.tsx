@@ -8,6 +8,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Typography,
   useTheme,
 } from '@mui/material'
 import { Box } from '@mui/system'
@@ -50,7 +51,18 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
                 <ListItemIcon>
                   <Icon>home</Icon>
                 </ListItemIcon>
-                <ListItemText primary='Página inicial' />
+                <ListItemText
+                  primary={
+                    <Typography
+                      sx={{ display: 'inline' }}
+                      component='span'
+                      variant='h6'
+                      color='text.primary'
+                    >
+                      Página inicial
+                    </Typography>
+                  }
+                />
               </ListItemButton>
             </List>
           </Box>
